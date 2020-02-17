@@ -1,0 +1,156 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    border: 60px solid #FFEB00;
+    border-bottom: none;
+    background-color: #FFFDF3;
+    font-family: 'Helvetica LT', 'Arial', sans;
+}
+
+/* typo */
+h1, h2, h3, .lead, nav li {
+    font-family: 'FRAC';
+    text-transform: uppercase;
+    font-weight: bold;
+}
+h2 {
+    font-size: 62px;
+}
+h2 span {
+    display: inline-block;
+    background-color: #FFEB00;
+    padding: 0 4px;
+}
+h3 {
+    font-size: 30px;
+}
+main p {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+.lead {
+    font-size: 81px;
+}
+footer p {
+    font-size: 17px;
+}
+.nav-item {
+    font-size: 30px;
+}
+a {
+    color: #000000;
+    text-decoration: none;
+}
+a:visited, a:active, a:focused {
+    color: #000000;
+}
+a.external {
+    position: relative;
+}
+a.external:after {
+    display: inline-block;
+    content: 'e';
+    position: absolute;
+    top: -12px;
+    font-family: 'FRAC';
+    font-size: 80px;
+    font-weight: bold;
+    text-transform: none;
+}
+a.extra {
+    display: inline-block;
+    transform: rotate(-10deg);
+    font-size: 30px;
+    font-family: 'FRAC';
+    font-weight: bold;
+    text-transform: uppercase;
+}
+em {
+    font-style: normal;
+    background-color: #FFEB00;
+}
+
+/* header */
+.logo {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.sticky {
+    margin-bottom: 50px;
+}
+.sticky nav {
+    position: fixed;
+    top: 0;
+    left: 60px;
+    width: calc(100% - 120px);
+    background-color: #FFFDF3;
+    z-index: 1;
+}
+
+/* nav */
+nav {
+    height: 50px;
+}
+nav ul {
+    padding: 0;
+    list-style: none;
+}
+nav li {
+    display: inline-block;
+}
+nav li + li {
+    margin-left: 15px;
+}
+nav a {
+    display: inline-block;
+    padding: 3px;
+    transition: 0.25s;
+}
+nav a.active {
+    background-color: #FFEB00;
+}
+
+/* layout */
+section {
+    padding: 1px 40px;
+}
+.tac {
+    text-align: center;
+}
+.lead {
+    margin-top: 180px;
+    display: inline-block;
+    transform: rotate(-10deg);
+}
+#Philosophie {
+    margin-top: 130px;
+    padding-left: 40%;
+}
+#Billetterie {
+    margin-top: 275px;
+    padding-left: 10%;
+}
+#Contact {
+    margin-top: -65px;
+    padding-left: 55%;
+}
+#Programme {
+    margin-top: 105px;
+    padding-left: 25%;
+}
+#Coin-Presse {
+    margin-top: 220px;
+    padding-left: 5%;
+}
+#Decouvrir-la-Region {
+    margin-top: 20px;
+    padding-left: 45%;
+}
+
+footer {
+    background-color: #FFEB00;
+    margin-top: 80px;
+    padding: 50px 0;
+}

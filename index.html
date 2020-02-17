@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bellelay Musiques 2020</title>
+
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/bellelay.css">
+
+</head>
+<body>
+
+    <header class="tac">
+        <img class="logo" src="assets/logo.svg" alt="Logo Bellelay Musiques">
+        <nav>
+            <ul>
+                <li><a href="#Philosophie">Philosophie</a></li>
+                <li><a href="#Billetterie">Billetterie</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <li><a href="#Programme">Programme</a></li>
+                <li><a href="#Coin-Presse">Coin Presse</a></li>
+                <li><a href="#Decouvrir-la-Region">Decouvrir la Region</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="tac">
+            <p class="lead">
+                Les battements de<br>
+                l’Abbatiale<br>
+                une saison a vivre
+            </p>
+        </section>
+        <section id="Philosophie">
+            <h2><span>Philosophie</span></h2>
+            <p>Une échappée belle hors du temps ; une exploration des sens et de l’espace : une expérience hors du commun… Les Battements de l’Abbatiale, biennale insufflée par la Fondation de Bellelay, ont pour vocation d’offrir une programmation audacieuse rendant hommage, par la musique et les arts visuels, à un patrimoine d’exception.</p>
+
+            <p>En écho à la richesse acoustique, historique et architecturale du lieu, la programmation se veut aussi éclectique qu’accessible aux amateurs de tous  horizons dépassant ainsi le cadre régional d’un tel événement.</p>
+
+            <p>Un festival à vivre plus qu’à écouter qui prendra le temps de distiller sa magie durant l’été entier.</p>
+
+            <h3>Bonne immersion dans cette<br>première saison !</h3>
+        </section>
+        <section id="Billetterie">
+            <h2><span>Billetterie</span></h2>
+            <p>
+                <a href="#" class="external">Billetterie</a>
+            </p>
+        </section>
+        <section id="Contact">
+            <h2><span>Contact</span></h2>
+            <p>Julien Annoni</p>
+
+            <p><a href="tel:+41793276874">+41 79 327 68 74</a><br>
+            <a href="mailto:julien.annoni@abbatialebellelay.ch">julien.annoni@abbatialebellelay.ch</a></p>
+        </section>
+        <section id="Programme">
+            <h2><span>Programme</span></h2>
+            <p>Julien Annoni, Claire Brawand, Arnaud Di Clemente, Antonio Garcia, Carine Zuber et Gabriel Wolfer ont ont conçu une programmation empreinte de renouveau et de contraste afin de mettre en valeur ce site historique et son acoustique si particulière.</p>
+
+            <p>1)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Les battements de l’Abbatiale se joue en quatre actes qui prendront place entre le mois de mai et d’octobre. Une action de médiation culturelle, tous publics, amorce chacune des soirées elles-mêmes composées de deux concerts imaginés en résonance l’un avec l’autre.</p>
+
+            <p>2)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;En contrepoint, les orgues de l’Abbatiale seront mis en valeur de façon magistrale au fil d’une programmation, également en quatre temps, qui leur sera entièrement dédiée entre le mois de mai et le mois d’août.</p>
+            
+            <p class="tac">
+                <a href="#" class="external extra"><em>Programme PDF</em></a>
+                <br><br><br>
+            </p>
+
+            <p>Pour assurer une expérience immersive à tous ces événements, la section « arts visuel » de la fondation de l’abbatiale de Bellelay et la commissaire Marina Porobic propose une collaboration avec <em>Videocompany</em> afin de présenter une exposition collective mettant l’accent sur l’art vidéo suisse en lien avec la musique. Cette installation, projetée sur les murs de l’Abbatiale, accompagnera toute la saison du festival.</p>
+
+            <p>Concept : Le rythme représente un principe de base en musique. Il est généralement indiqué ou définit par le métronome. Dans l’exposition, le métronome se fait guide d’une borne de projection à la suivante. L’installation comporte 4 à 5 bornes de projection et immerge le spectateur dans un univers sonore et visuel</p>
+
+        </section>
+        <section id="Coin-Presse">
+            <h2><span>Coin Presse</span></h2>
+            <p>
+                <a href="#" class="external">Photos</a><br>
+                <a href="#" class="external">Dossier de presse</a>
+            </p>
+        </section>
+        <section id="Decouvrir-la-Region">
+            <h2><span>Decouvrir la Region</span></h2>
+            <p>
+                <a href="#" class="external">Abbatiale de Bellelay</a><br>
+                <a href="#" class="external">Bellelay.ch</a><br>
+                <a href="#" class="external">Libell’lay</a><br>
+                <a href="#" class="external">Maison de la Tête de Moine</a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>
+            ©2020 Saison Musique Bellelay<br>
+            Concept & Design: SIFON | <a href="https://www.sifon.li" target="_blank">www.sifon.li</a><br>
+            Programming: <a href="https://things.care" target="_blank">things.care</a>
+        </p>
+    </footer>
+
+    <script>
+
+        var navtop = document.querySelector('nav').offsetTop + 35,
+            sections = document.querySelectorAll('section[id]'),
+            nav_items = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', function(){
+            var scrolltop = document.querySelector('html').scrollTop
+                                || document.querySelector('body').scrollTop;
+            var topsection;
+
+            if(scrolltop > navtop) {
+                document.querySelector('header').classList.add('sticky');
+            } else {
+                document.querySelector('header').classList.remove('sticky');
+            }
+
+            for(var s = 0; s < sections.length; s++){
+                var section = sections[s],
+                    sectiontop = section.offsetTop + 35;
+
+                if(scrolltop > sectiontop){
+                    topsection = section;
+                }
+            }
+
+            if(typeof topsection !== 'undefined') {
+                for(var n = 0; n < sections.length; n++){
+                    var nav_item = nav_items[n];
+
+                    if(nav_item.href.indexOf(topsection.id) > -1){
+                        nav_item.classList.add('active')
+                    } else {
+                        nav_item.classList.remove('active')
+                    }
+                }
+            } else {
+                for(var n = 0; n < sections.length; n++){
+                    var nav_item = nav_items[n];
+                    nav_item.classList.remove('active')
+                }
+            }
+        })
+        
+
+    </script>
+    
+</body>
+</html>
