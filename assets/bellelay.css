@@ -234,10 +234,8 @@ footer {
 
 /* mobile view */
 @media (max-width: 780px){
-    .colone_desktop {
-        display: none;
-    }
     body {
+        position: relative;
         border-width: 20px;
     }
     #topbar, #bottombar {
@@ -287,6 +285,9 @@ footer {
     }
     main p {
         font-size: 17px;
+        background: #FFFDF3;
+        margin: 0;
+        padding: 20px 0;
     }
     .lead {
         font-size: 27px;
@@ -302,6 +303,29 @@ footer {
     a.external:after {
         font-size: 40px;
         top: -5px;
+    }
+    .colone_1 {
+        top: 60vw;
+    }
+    .colone_1 img {
+        width: 120%;
+        left: -10%;
+    }
+    .colone_2 img {
+        width: 120%;
+        left: -10%;
+    }
+    .colone_2 {
+        top: auto;
+        position: absolute;
+        z-index: 2000;
+        width: 100%;
+        bottom: 0;
+        height: 400px;
+        overflow: hidden;
+    }
+    footer {
+        margin-top: 200px;
     }
 }
 

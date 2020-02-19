@@ -111,11 +111,11 @@
             nav_items = document.querySelectorAll('nav a');
 
         window.addEventListener('scroll', function(){
-            if(window.innerWidth > 780){
-                var scrolltop = document.querySelector('html').scrollTop
-                                || document.querySelector('body').scrollTop;
-                var topsection;
+            var scrolltop = document.querySelector('html').scrollTop
+                            || document.querySelector('body').scrollTop;
+            var topsection;
 
+            if(window.innerWidth > 780){
                 if(scrolltop > navtop) {
                     document.querySelector('header').classList.add('sticky');
                 } else {
@@ -147,6 +147,7 @@
                         nav_item.classList.remove('active')
                     }
                 }
+            }
 
                 var body = document.body,
                     html = document.documentElement;
@@ -159,7 +160,6 @@
                 document.querySelector('.colone_3 img').style.top = (300 - 600 / 100 * prcntg).toString() + 'px'; 
 
                 document.querySelector('.colone_4 img').style.top = (1000 - 2000 / 100 * prcntg).toString() + 'px'; 
-            }
         })
         
 
