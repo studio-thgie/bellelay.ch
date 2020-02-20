@@ -21,6 +21,11 @@
     <header class="tac">
         <img class="logo" src="assets/logo.svg" alt="Logo Bellelay Musiques">
         <nav>
+            <div class="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <ul>
                 <li><a href="#Presentation">Presentation</a></li>
                 <li><a href="#Programme">Programme</a></li>
@@ -79,27 +84,25 @@
             </div>
             <div>
                 <h4><span>Contact</span></h4>
-                <p class="third">
-                    Programmation Bellelay Musiques:<br>
-                    <b>Julien Annoni</b><br>
-                    <a href="mailto:julien.annoni@abbatialebellelay.ch">julien.annoni@abbatialebellelay.ch</a>
-                </p>
-                <p class="third">
-                    Programmation Orgues:<br>
-                    <b>Antonio Garcia</b><br>
-                    <a href="mailto:orgue@abbatialebellelay.ch">orgue@abbatialebellelay.ch</a>
-                </p>
-                <p class="third">
-                    Curation Arts visuels: <br>
-                    <b>Marina Probic</b><br>
-                    <a href="mailto:porobic@gmail.com">porobic@gmail.com</a>
-                </p>
+                <p class="third">Responsable Bellelay Musiques<br>
+                Programmation les battements de l’abbtiale<br>
+                Julien Annoni<br>
+                +41 79 327 68 74 <br>
+                julien.annoni@abbatialebellelay.ch</p>
+
+                <p class="third">Programmation Orgues:<br>
+                Antonio Garcia<br>
+                orgue@abbatialebellelay.ch</p>
+
+                <p class="third">Curation Arts visuels:<br>
+                Marina Probic<br>
+                porobic@gmail.com</p>
             </div>
         </section>
     </main>
     <footer>
         <p>
-            ©2020 Saison Musique Bellelay<br>
+            ©2020 Saison Musiques Bellelay<br>
             Concept & Design: SIFON | <a href="https://www.sifon.li" target="_blank">www.sifon.li</a><br>
             Programming: <a href="https://things.care" target="_blank">things.care</a>
         </p>
@@ -116,7 +119,6 @@
                             || document.querySelector('body').scrollTop;
             var topsection;
 
-            if(window.innerWidth > 780){
                 if(scrolltop > navtop) {
                     document.querySelector('header').classList.add('sticky');
                 } else {
@@ -137,18 +139,17 @@
                         var nav_item = nav_items[n];
 
                         if(nav_item.href.indexOf(topsection.id) > -1){
-                            nav_item.classList.add('active')
+                            nav_item.parentNode.classList.add('active')
                         } else {
-                            nav_item.classList.remove('active')
+                            nav_item.parentNode.classList.remove('active')
                         }
                     }
                 } else {
                     for(var n = 0; n < sections.length; n++){
                         var nav_item = nav_items[n];
-                        nav_item.classList.remove('active')
+                        nav_item.parentNode.classList.remove('active')
                     }
                 }
-            }
 
                 var body = document.body,
                     html = document.documentElement;
@@ -161,6 +162,10 @@
                 document.querySelector('.colone_3 img').style.top = (300 - 600 / 100 * prcntg).toString() + 'px'; 
 
                 document.querySelector('.colone_4 img').style.top = (1000 - 2000 / 100 * prcntg).toString() + 'px'; 
+        })
+
+        document.querySelector('.burger').addEventListener('click', function(){
+            document.querySelector('nav ul').classList.toggle('open');
         })
         
 
