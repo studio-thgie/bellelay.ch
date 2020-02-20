@@ -14,7 +14,7 @@ body {
     border: 60px solid #FFEB00;
     border-bottom: none;
     background-color: #FFFDF3;
-    font-family: 'Helvetica LT', 'Arial', sans;
+    font-family: 'Helvetica LT', 'Helvetica', 'Arial', sans;
 
     overflow-x: hidden;
 }
@@ -58,6 +58,9 @@ main p {
     font-size: 25px;
     margin-bottom: 40px;
 }
+main #Billetterie p {
+    font-size: 18px;
+}
 .lead {
     font-size: 81px;
 }
@@ -88,6 +91,10 @@ a.external:after {
     font-size: 80px;
     font-weight: bold;
     text-transform: none;
+}
+#Billetterie a.external:after {
+    font-size: 40px;
+    top: -5px;
 }
 em {
     font-style: normal;
@@ -205,22 +212,38 @@ section {
     left: 70%;
 }
 #Presentation {
+    padding-top: 60px ;
     margin-top: 130px;
     padding-left: 40%;
 }
 #Programme {
+    padding-top: 60px ;
     margin-top: 75px;
     padding-left: 10%;
     max-width: 70%;
 }
 #Billetterie {
+    padding: 0 15%;
 }
-#Billetterie > div {
+.half {
     width: 50%;
     float: left;
 }
-#Billetterie div div {
-    padding: 0 15%;
+.half:nth-child(2) > * {
+    padding-right: 5%;
+}
+.half:nth-child(3) {
+    padding-top: 100px;
+}
+.half:nth-child(3) > * {
+    padding-left: 5%;
+}
+.third {
+    width: 33.3%;
+    float: left;
+}
+h4 {
+    clear: both;
 }
 
 footer {
@@ -234,10 +257,8 @@ footer {
 
 /* mobile view */
 @media (max-width: 780px){
-    .colone_desktop {
-        display: none;
-    }
     body {
+        position: relative;
         border-width: 20px;
     }
     #topbar, #bottombar {
@@ -271,12 +292,12 @@ footer {
         margin-top: 50px !important;
         max-width: 100% !important;
     }
-    #Billetterie > div {
+    .half, .third {
         width: 100%;
         float: none;
     }
-    #Billetterie div div {
-        padding: 0;
+    .half > * {
+        padding: 0 !important;
     }
     /* mobile typo */
     h2 {
@@ -289,6 +310,9 @@ footer {
     }
     main p {
         font-size: 17px;
+        background: #FFFDF3;
+        margin: 0;
+        padding: 20px 0;
     }
     .lead {
         font-size: 27px;
@@ -304,6 +328,29 @@ footer {
     a.external:after {
         font-size: 40px;
         top: -5px;
+    }
+    .colone_1 {
+        top: 60vw;
+    }
+    .colone_1 img {
+        width: 120%;
+        left: -10%;
+    }
+    .colone_2 img {
+        width: 120%;
+        left: -10%;
+    }
+    .colone_2 {
+        top: auto;
+        position: absolute;
+        z-index: 2000;
+        width: 100%;
+        bottom: 0;
+        height: 400px;
+        overflow: hidden;
+    }
+    footer {
+        margin-top: 200px;
     }
 }
 
