@@ -239,8 +239,10 @@ section {
     padding-left: 5%;
 }
 .third {
-    width: 33.3%;
+    width: 30%;
     float: left;
+    min-width: 300px;
+    padding-right: 10px;
 }
 h4 {
     clear: both;
