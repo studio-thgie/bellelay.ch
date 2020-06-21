@@ -248,6 +248,22 @@ h4 {
     clear: both;
 }
 
+#sponsors {
+    clear: both;
+    margin: 0 40px;
+    padding: 20px;
+    background: #ffeb00;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#sponsors img {
+	margin: 15px;
+	max-width: 150px;
+	min-width: 100px;
+}
+
 footer {
     clear: both;
     position: relative;
