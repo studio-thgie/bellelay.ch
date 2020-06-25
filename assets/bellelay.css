@@ -431,4 +431,8 @@ footer {
         position: relative;
         left: -20px;
     }
+    #sponsors {
+        margin: 0;
+    }
+
 }
