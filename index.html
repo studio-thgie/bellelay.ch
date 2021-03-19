@@ -133,6 +133,8 @@
             sections = document.querySelectorAll('section[id]'),
             nav_items = document.querySelectorAll('nav a');
 
+            console.log(nav_items)
+
         window.addEventListener('scroll', function(){
             var scrolltop = document.querySelector('html').scrollTop
                             || document.querySelector('body').scrollTop;
@@ -157,16 +159,20 @@
                     for(var n = 0; n < sections.length; n++){
                         var nav_item = nav_items[n];
 
-                        if(nav_item.href.indexOf(topsection.id) > -1){
-                            nav_item.parentNode.classList.add('active')
-                        } else {
-                            nav_item.parentNode.classList.remove('active')
+                        if(nav_item != undefined) {
+                            if(nav_item.href.indexOf(topsection.id) > -1){
+                                nav_item.parentNode.classList.add('active')
+                            } else {
+                                nav_item.parentNode.classList.remove('active')
+                            }
                         }
                     }
                 } else {
                     for(var n = 0; n < sections.length; n++){
                         var nav_item = nav_items[n];
-                        nav_item.parentNode.classList.remove('active')
+                        if(nav_item != undefined) {
+                            nav_item.parentNode.classList.remove('active')
+                        }
                     }
                 }
 
